@@ -28,6 +28,18 @@ source "$SCRIPT_DIR/venv/bin/activate"
 pip install --upgrade pip --quiet
 pip install -r requirements.txt --quiet
 
+# Set up config file.
+if [ ! -f "$SCRIPT_DIR/camping.cfg" ]; then
+    cp "$SCRIPT_DIR/camping.cfg.example" "$SCRIPT_DIR/camping.cfg"
+    echo ""
+    echo "📋 Created camping.cfg — open it and:"
+    echo "   1. Set your START_DATE and END_DATE"
+    echo "   2. Set PARKS (or leave blank for all Yosemite campgrounds)"
+    echo "   3. Optionally fill in Gmail + NOTIFY_EMAIL for email/SMS alerts"
+else
+    echo "✅ camping.cfg already exists (skipping)"
+fi
+
 echo ""
 if command -v terminal-notifier &>/dev/null; then
     echo "✅ terminal-notifier found — macOS notifications are enabled."
@@ -40,7 +52,7 @@ echo ""
 echo "✅ Setup complete!"
 echo ""
 echo "Try it out:"
-echo "  ./check.sh --start-date 2025-07-01 --end-date 2025-07-07 --parks 232449"
+echo "  ./check.sh"
 echo ""
 echo "To run automatically every 5 minutes, add this line to your crontab (run 'crontab -e'):"
-echo "  */5 * * * * $SCRIPT_DIR/check.sh --start-date 2025-07-01 --end-date 2025-07-07 >> $SCRIPT_DIR/camping.log 2>&1"
+echo "  */5 * * * * $SCRIPT_DIR/check.sh >> $SCRIPT_DIR/camping.log 2>&1"

@@ -11,12 +11,23 @@ Check https://recreation.gov for campsite availability and get notified when sit
 ./setup.sh
 ```
 
-**2. Check availability** (defaults to all 15 Yosemite campgrounds):
-```bash
-./check.sh --start-date 2025-07-01 --end-date 2025-07-07
+**2. Edit your config** — `setup.sh` creates `camping.cfg` from the example. Open it and set your dates, parks, and optionally email/SMS credentials:
+```
+START_DATE=2025-07-23
+END_DATE=2025-07-28
+PARKS=10083567        # White Wolf only — leave blank for all 15 Yosemite campgrounds
+
+GMAIL_ADDRESS=you@gmail.com
+GMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx
+NOTIFY_EMAIL=5551234567@vtext.com   # or any email address
 ```
 
-**3. (Optional) Enable macOS notifications** so you get a pop-up the moment a site opens:
+**3. Check availability** (reads dates and parks from `camping.cfg`):
+```bash
+./check.sh
+```
+
+**4. (Optional) Enable macOS notifications** so you get a pop-up the moment a site opens:
 ```bash
 brew install terminal-notifier
 ```
@@ -28,11 +39,11 @@ Open your crontab editor:
 ```bash
 crontab -e
 ```
-Add this line (replace the dates, park ID, and path with your own):
+Add this line (`setup.sh` prints the exact command with your full path already filled in):
 ```
-*/5 * * * * /path/to/recreation-gov-campsite-checker/check.sh --start-date 2025-07-01 --end-date 2025-07-07 --parks 232449 >> /path/to/recreation-gov-campsite-checker/camping.log 2>&1
+*/5 * * * * /path/to/recreation-gov-campsite-checker/check.sh >> /path/to/recreation-gov-campsite-checker/camping.log 2>&1
 ```
-`setup.sh` will print the exact line to paste with your full path already filled in.
+> ⚠️ **Mac sleep**: cron won't run while your Mac is asleep, so keep it plugged in or awake if you're watching for last-minute openings.
 
 ## Finding Park and Campsite IDs
 
