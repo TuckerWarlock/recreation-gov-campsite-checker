@@ -31,5 +31,5 @@ NTFY_TOPIC=yosemite-white-wolf
 #   3. Paste the 16-character password below (spaces are fine).
 
 EMAIL_ADDRESS=
-EMAIL_PASSWORD=
+EMAIL_PASSWORD="xxxx xxxx xxxx xxxx"
 NOTIFY_EMAIL=
