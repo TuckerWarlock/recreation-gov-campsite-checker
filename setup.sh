@@ -29,6 +29,14 @@ pip install --upgrade pip --quiet
 pip install -r requirements.txt --quiet
 
 echo ""
+if command -v terminal-notifier &>/dev/null; then
+    echo "✅ terminal-notifier found — macOS notifications are enabled."
+else
+    echo "💡 Optional: install terminal-notifier for macOS notifications when sites open up:"
+    echo "   brew install terminal-notifier"
+fi
+
+echo ""
 echo "✅ Setup complete!"
 echo ""
 echo "Try it out:"

@@ -16,7 +16,13 @@ Check https://recreation.gov for campsite availability and get notified when sit
 ./check.sh --start-date 2025-07-01 --end-date 2025-07-07 --parks 232449
 ```
 
-**3. Run it automatically every 5 minutes** so you get notified the moment a site opens up.
+**3. (Optional) Enable macOS notifications** so you get a pop-up the moment a site opens:
+```bash
+brew install terminal-notifier
+```
+`setup.sh` will detect it automatically — no other configuration needed. When `check.sh` finds available sites it will fire a native macOS notification.
+
+**4. Run it automatically every 5 minutes** so you get notified the moment a site opens up.
 
 Open your crontab editor:
 ```bash
