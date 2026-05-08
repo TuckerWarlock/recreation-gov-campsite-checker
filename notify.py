@@ -17,7 +17,7 @@ def send_ntfy(topic, body):
     req = urllib.request.Request(
         f"https://ntfy.sh/{topic}",
         data=body.encode(),
-        headers={"Title": "🏕 Campsites Available!"},
+        headers={"Title": "Campsites Available!"},
     )
     urllib.request.urlopen(req, timeout=10)
     print(f"ntfy notification sent to topic '{topic}'")
