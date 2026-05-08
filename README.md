@@ -121,5 +121,9 @@ python -m unittest -v
 
 All tests must pass before a pull request gets merged.
 
-**Thanks to https://github.com/bri-bri/yosemite-camping for the original version.**
+## Credits
+
+- [bri-bri/yosemite-camping](https://github.com/bri-bri/yosemite-camping) — original version of this scraper
+- [jameswnl/recreation-gov-campsite-checker](https://github.com/jameswnl/recreation-gov-campsite-checker) — upstream fork this repo is based on
+- [streeter/recreation-gov-campsite-checker](https://github.com/streeter/recreation-gov-campsite-checker) — inspiration for the `terminal-notifier` macOS notification integration
 
