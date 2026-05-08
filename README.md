@@ -13,12 +13,12 @@ Check https://recreation.gov for campsite availability and get notified when sit
 
 **2. Edit your config** — `setup.sh` creates `camping.cfg` from the example. Open it and fill in your details:
 ```
-START_DATE=2025-07-23
-END_DATE=2025-07-28
+START_DATE=2026-07-23
+END_DATE=2026-07-28
 PARKS=10083567        # White Wolf only — leave blank for all 15 Yosemite campgrounds
 
 # Push notifications via ntfy.sh (free, recommended)
-NTFY_TOPIC=yosemite-white-wolf
+NTFY_TOPIC=unique-topic-name
 
 # Email notifications via Gmail (optional)
 EMAIL_ADDRESS=you@gmail.com
