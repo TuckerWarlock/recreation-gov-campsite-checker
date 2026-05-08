@@ -4,8 +4,8 @@
 # -------------------------------------------------------
 
 # --- Dates to check (required) ---
-START_DATE=2025-07-23
-END_DATE=2025-07-28
+START_DATE=2026-07-23
+END_DATE=2026-07-28
 
 # --- Parks to check ---
 # Space-separated recreation.gov campground IDs.

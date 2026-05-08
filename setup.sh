@@ -41,11 +41,13 @@ else
 fi
 
 echo ""
-if command -v terminal-notifier &>/dev/null; then
-    echo "✅ terminal-notifier found — macOS notifications are enabled."
-else
-    echo "💡 Optional: install terminal-notifier for macOS notifications when sites open up:"
-    echo "   brew install terminal-notifier"
+if [[ "$(uname)" == "Darwin" ]]; then
+    if command -v terminal-notifier &>/dev/null; then
+        echo "✅ terminal-notifier found — macOS notifications are enabled."
+    else
+        echo "💡 Optional: install terminal-notifier for macOS pop-up notifications:"
+        echo "   brew install terminal-notifier"
+    fi
 fi
 
 echo ""
