@@ -11,29 +11,35 @@ Check https://recreation.gov for campsite availability and get notified when sit
 ./setup.sh
 ```
 
-**2. Edit your config** — `setup.sh` creates `camping.cfg` from the example. Open it and set your dates, parks, and optionally email/SMS credentials:
+**2. Edit your config** — `setup.sh` creates `camping.cfg` from the example. Open it and fill in your details:
 ```
 START_DATE=2025-07-23
 END_DATE=2025-07-28
 PARKS=10083567        # White Wolf only — leave blank for all 15 Yosemite campgrounds
 
-GMAIL_ADDRESS=you@gmail.com
-GMAIL_APP_PASSWORD=xxxx xxxx xxxx xxxx
-NOTIFY_EMAIL=5551234567@vtext.com   # or any email address
+# Push notifications via ntfy.sh (free, recommended)
+NTFY_TOPIC=yosemite-white-wolf
+
+# Email notifications via Gmail (optional)
+EMAIL_ADDRESS=you@gmail.com
+EMAIL_PASSWORD=xxxx xxxx xxxx xxxx
+NOTIFY_EMAIL=you@example.com
 ```
 
-**3. Check availability** (reads dates and parks from `camping.cfg`):
+**3. (Optional) Set up push notifications on your phone** — install the [ntfy app](https://ntfy.sh) and subscribe to the topic name from your config. That's it — no account needed.
+
+**4. Check availability** (reads everything from `camping.cfg`):
 ```bash
 ./check.sh
 ```
 
-**4. (Optional) Enable macOS notifications** so you get a pop-up the moment a site opens:
+**5. (Optional) Enable macOS pop-up notifications:**
 ```bash
 brew install terminal-notifier
 ```
-`setup.sh` will detect it automatically — no other configuration needed. When `check.sh` finds available sites it will fire a native macOS notification.
+`setup.sh` will detect it automatically — no other configuration needed.
 
-**4. Run it automatically every 5 minutes** so you get notified the moment a site opens up.
+**6. Run it automatically every 5 minutes** so you get notified the moment a site opens up.
 
 Open your crontab editor:
 ```bash

@@ -60,8 +60,9 @@ if echo "$output" | grep -q "🏕"; then
 
     # Email / SMS notification (optional, configured in camping.cfg).
     echo "$output" | \
-        GMAIL_ADDRESS="$GMAIL_ADDRESS" \
-        GMAIL_APP_PASSWORD="$GMAIL_APP_PASSWORD" \
+        NTFY_TOPIC="$NTFY_TOPIC" \
+        EMAIL_ADDRESS="$EMAIL_ADDRESS" \
+        EMAIL_PASSWORD="$EMAIL_PASSWORD" \
         NOTIFY_EMAIL="$NOTIFY_EMAIL" \
         python "$SCRIPT_DIR/notify.py"
 fi

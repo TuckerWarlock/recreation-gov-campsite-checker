@@ -13,21 +13,23 @@ END_DATE=2025-07-28
 # White Wolf only:
 PARKS=10083567
 
-# --- Email / SMS notification (optional) ---
-# Sends an alert when a site opens up. Uses Gmail with an App Password.
+# --- ntfy.sh push notifications (optional, recommended) ---
+# Free, open-source push notifications to your phone.
+# 1. Install the ntfy app: https://ntfy.sh
+# 2. Subscribe to the topic name below in the app.
+# ⚠️  Anyone who knows your topic name can subscribe — make it unguessable
+#     or use a self-hosted ntfy server for privacy.
+NTFY_TOPIC=yosemite-white-wolf
+
+# --- Email notification (optional) ---
+# Uses Gmail with an App Password (same setup as ping-test).
 # Leave all three blank to disable.
 #
 # App Password setup (takes ~2 minutes):
 #   1. Enable 2-Step Verification: https://myaccount.google.com/security
 #   2. Create an App Password:     https://myaccount.google.com/apppasswords
 #   3. Paste the 16-character password below (spaces are fine).
-#
-# To receive a text instead of email, use your carrier's email-to-SMS gateway:
-#   Verizon:   5551234567@vtext.com
-#   AT&T:      5551234567@txt.att.net
-#   T-Mobile:  5551234567@tmomail.net
-#   Sprint:    5551234567@messaging.sprintpcs.com
 
-GMAIL_ADDRESS=
-GMAIL_APP_PASSWORD=
+EMAIL_ADDRESS=
+EMAIL_PASSWORD=
 NOTIFY_EMAIL=
