@@ -1,0 +1,18 @@
+# Yosemite National Park campgrounds
+# Usage: ./check.sh --start-date YYYY-MM-DD --end-date YYYY-MM-DD --stdin < yosemite.txt
+
+232449  # North Pines Campground
+232447  # Upper Pines Campground
+232450  # Lower Pines Campground
+232451  # Hodgdon Meadow Campground
+10083567  # White Wolf Campground
+232453  # Bridalveil Creek Campground
+10083845  # Tamarack Flat Campground
+232452  # Crane Flat Campground
+232448  # Tuolumne Meadows Campground
+10004152  # Camp 4
+232446  # Wawona Campground
+10083840  # Yosemite Creek Campground
+10083831  # Porcupine Flat Campground
+10220609  # Wawona Horse Campsites
+10346420  # Tuolumne Horse Campsites

@@ -11,9 +11,9 @@ Check https://recreation.gov for campsite availability and get notified when sit
 ./setup.sh
 ```
 
-**2. Check availability:**
+**2. Check availability** (defaults to all 15 Yosemite campgrounds):
 ```bash
-./check.sh --start-date 2025-07-01 --end-date 2025-07-07 --parks 232449
+./check.sh --start-date 2025-07-01 --end-date 2025-07-07
 ```
 
 **3. (Optional) Enable macOS notifications** so you get a pop-up the moment a site opens:
